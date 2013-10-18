@@ -1,0 +1,126 @@
+Question 1)
+
+public void orderedAdd ( Comparable toAdd ) {
+    
+	//Create a new node to add
+	Listnode<Comparable> new_node = new Listnode<Comparable>();
+	new_node.setData(toAdd);
+	new_node.setNext(null);
+	//look for the correct place in the list
+	
+	if(head.getNext() == null)//if no nodes in the list
+	{
+		head.setNext(new_node);
+		numItems = 1;
+		return; 
+	}
+	if(head.getNext().getData().compareTo(new_node.getData()) >= 0)//check if the node is less than the head node
+	{
+		new_node.setNext(head.getnext());
+		head.setNext(new_node);
+		numItems++;
+		return;		
+	}
+	else
+	{
+		Listnode<Comparable> temp = head.getNext();//Set the start of search at the head of the list
+		while( temp.getNext() != null )//keep searching until the end of the list
+		{
+			if( temp.getNext().getData().compareTo(new_node.getData()) >= 0)
+			{
+				new_node.setNext(temp.getNext());
+				temp.setNext(new_node);
+				numItems++;
+				return;	
+			}
+			else
+			{
+				//move to next node
+				temp = temp.getNext();		
+			}
+		}
+		//if the new node is larger than any of the nodes present in the list
+		temp.setNext(new_node);//attach it at the end of the list
+		numItems++;
+		return;
+	}
+}
+
+
+
+
+
+Question 2)
+
+
+public void orderedAdd ( Comparable toAdd ) {
+    
+	//Create a new node to add
+	Listnode<Comparable> new_node = new Listnode<Comparable>();
+	new_node.setData(toAdd);
+	new_node.setNext(null);
+	new_node.setPrev(null);
+
+	//look for the correct place in the list
+	
+	if(head.getNext() == null)//if no nodes in the list
+	{
+		head.setNext(new_node);
+		new_node.set_prev(head);
+		numItems = 1;
+		return; 
+	}
+	if(head.getData().compareTo(new_node.getData()) >= 0)//check if the node is less than the head node
+	{
+		new_node.setNext(head.getnext());.
+		new_node.setPrev(head);
+		head.setNext(new_node);
+		new_node.getNext().setPrev(new_node);
+		numItems++;
+		return;		
+	}
+	else
+	{
+		Listnode<Comparable> temp = head.getNext();//Set the start of search at the head of the list
+		while( temp.getNext() != null )//keep searching until the end of the list
+		{
+			if( temp.getNext().getData().compareTo(new_node.getData()) >= 0)
+			{
+				//total 4 connections have to be modified to add the node to the list
+				new_node.setNext(temp.getNext());
+				new_node.setPrev(temp);
+				temp.getNext().setPrev(new_node);
+				temp.setNext(new_node);
+				numItems++;
+				return;
+	
+			}
+			else
+			{
+				//move to next node
+				temp = temp.getNext();		
+			}
+		}
+		//if the new node is larger than any of the nodes present in the list
+		temp.setNext(new_node);//attach it at the end of the list
+		new_node.setPrev(temp);
+		numItems++;
+		return;
+	}
+}
+
+
+Question 3)
+	
+	
+Both are O(N) algorithms.
+It is just that the second method has to set up more links as it  uses doubly linked list.
+Setting the links between the nodes takes constant time.
+
+This complexity can be improved using better searching techniques.
+
+
+
+
+
+

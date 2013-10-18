@@ -1,0 +1,127 @@
+Question 1)
+
+ArrayBoxV1 box= new ArrayBox();
+for(int i=0;i<100;i++)
+{
+	Integer temp=i;
+	box.add(temp);
+}
+
+
+
+
+
+
+Question 2)
+
+
+Initial contents: "apple","banana","orange","pear" 
+
+Iter 1: "pear" , "apple" , "banana" , "orange" 
+
+Iter 2: "pear" , "orange" , "apple" , "banana" 
+
+Iter 3: "pear" , "orange" , "banana" , "apple" 
+
+We see that after the iterations of the for loop, the list is reveresed.
+Thus the code does work.
+
+
+
+
+
+
+Question 3)
+
+The code is concatenating the src ListADT to the end of dst ListADT.
+
+
+
+
+
+
+Question 4)
+
+
+public static ArrayList<Integer> merge( ArrayList<Integer> L1, ArrayList<Integer> L2 ) throws BadListException {
+
+	if( L1==null || L2==null)
+	{
+		// If L1 or L2 (or both L1 and L2) is null, throw a BadListException.
+		throw new BadListException();
+	}
+
+	if(L1.size()==0 && L2.size()==0)
+	{
+		// If L1 and L2 are both empty, return a new empty list.
+		return new ArrayList<Integer>();
+	}
+
+	if(L1.size()==0)
+	{
+		// If L1 is empty (but not L2), return a new list containing the objects in L2.
+		List<Integer> newList = new ArrayList<Integer>();
+		for (Integer i:L2)
+		{
+   			newList.add(i);
+		}
+		return newList;
+	}
+
+	if(L2.size()==0)
+	{
+		// If L2 is empty (but not L1), return a new list containing the objects in L1.
+		List<Integer> newList = new ArrayList<Integer>();
+		for (Integer i:L1)
+		{
+   			newList.add(i);
+		}
+		return newList;
+	}
+	//Create a new list to return
+	List<Integer> newList = new ArrayList<Integer>();
+	//Use iterators for each list
+	Iterator<Integer> itr1= L1.iterator();
+	Iterator<Integer> itr2= L2.iterator();
+	Integer temp1=itr1.next();
+	Integer temp2=itr2.next();
+	//Compare and Copy	
+	while(1)
+	{
+		if(temp1<=temp2)
+		{
+			newList.add(temp1);
+			if(!itr1.hasNext())
+			{
+				break;
+			}
+			temp1=itr1.next();
+		}
+		else
+		{
+			newList.add(temp2);
+			if(!itr2.hasNext())
+			{
+				break;
+			}			
+			temp2=itr2.next;
+		}	
+	}
+	//Copy the remaining list
+	if(itr1.hasNext())
+	{
+		while(itr1.hasNext())
+		{
+			newList.add(itr1.next());
+		}
+	}
+	if(itr2.hasnext())
+	{
+
+		while(itr2.hasNext())
+		{
+			newList.add(itr2.next());
+		}
+	}
+	return newList;
+}

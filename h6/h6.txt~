@@ -1,0 +1,56 @@
+Question 1
+
+Part A:
+
+
+		   88
+		  /  \
+	        44    99
+	       /   \
+	     33    66
+	    /	  /  \
+	   22    55   77
+	  /
+	 11
+
+Part B
+
+		   88
+		  /  \
+	        55    99
+	       /   \
+	     33    66
+	    /	     \
+	   22        77
+	  /
+	 11
+
+
+
+
+Question 2
+
+	     	   88
+		  /  \
+	       [44]   99
+	      /     \
+	    22       66
+	   /  \     /   \
+        [11] [33]  [55] [77]
+
+
+Question 3
+
+Part A: 
+
+-> NOT a max Heap: Violates order property. Node 25 is bigger than its parent i.e. 10.
+
+
+Part B:
+
+->NOT a max Heap: Violates shape property. A hole in the array causes the tree to be not complete.
+
+Part C:
+
+->IS a valid max Heap: Every node is greater than or equal to its children. The array does not have holes so the binary tree is complete.
+	 

@@ -1,0 +1,46 @@
+enter choice (a, d, f, p, q): a GE:GENERAL ELECTRIC:23.63
+enter choice (a, d, f, p, q): a IBM:IBM:197.99
+enter choice (a, d, f, p, q): a T:AT&T INC.:35.74
+enter choice (a, d, f, p, q): a MSFT:MICROSOFT CORP:35.44
+enter choice (a, d, f, p, q): a BA:BOEING CO:107.63
+enter choice (a, d, f, p, q): a MCD:MCDONALDS CORP:100.18
+enter choice (a, d, f, p, q): a WMT:WALMART-STORES:77.34
+enter choice (a, d, f, p, q): p
+BA(BOEING CO): $107.63
+GE(GENERAL ELECTRIC): $23.63
+IBM(IBM): $197.99
+MCD(MCDONALDS CORP): $100.18
+MSFT(MICROSOFT CORP): $35.44
+T(AT&T INC.): $35.74
+WMT(WALMART-STORES): $77.34
+enter choice (a, d, f, p, q): f T
+T(AT&T INC.): $35.74
+enter choice (a, d, f, p, q): f PG
+Not Present
+enter choice (a, d, f, p, q): a XOM:EXXON MOBIL CORP:94.38
+enter choice (a, d, f, p, q): p
+BA(BOEING CO): $107.63
+GE(GENERAL ELECTRIC): $23.63
+IBM(IBM): $197.99
+MCD(MCDONALDS CORP): $100.18
+MSFT(MICROSOFT CORP): $35.44
+T(AT&T INC.): $35.74
+WMT(WALMART-STORES): $77.34
+XOM(EXXON MOBIL CORP): $94.38
+enter choice (a, d, f, p, q): d MCD
+enter choice (a, d, f, p, q): f BA
+BA(BOEING CO): $107.63
+enter choice (a, d, f, p, q): f XOM
+XOM(EXXON MOBIL CORP): $94.38
+enter choice (a, d, f, p, q): d GE
+enter choice (a, d, f, p, q): f MSFT
+MSFT(MICROSOFT CORP): $35.44
+enter choice (a, d, f, p, q): p
+BA(BOEING CO): $107.63
+IBM(IBM): $197.99
+MSFT(MICROSOFT CORP): $35.44
+T(AT&T INC.): $35.74
+WMT(WALMART-STORES): $77.34
+XOM(EXXON MOBIL CORP): $94.38
+enter choice (a, d, f, p, q): q
+done

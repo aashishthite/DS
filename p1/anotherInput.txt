@@ -1,0 +1,29 @@
+Tom Cruise,Saving Private Ryan,90,batman begins,75,independence day,55
+Will Smith,napoleon dynamite,20,anchorman,77,batman begins,75
+Tom Hanks,batman begins,75,napoleon dynamite,20,Saving Private Ryan,90
+Clint Eastwood,anchorman,77,gladiator,55
+Jessica Walter,gladiator,55,batman begins,75
+Jack Black,american History X,72,napoleon dynamite,20,independence day,55
+Mel Brooks,anchorman,77,batman begins,75,gladiator,55
+Morgan Freeman,One flew over the cuckoos nest,66,the dark knight,90
+Tim Robins,napoleon dynamite,20,american History X,72,Saving Private Ryan,90
+Christian Bale,anchorman,77,napoleon dynamite,20
+Heath Ledger,gladiator,55,One flew over the cuckoos nest,66
+Brad Pitt,batman begins,75,gladiator,55,napoleon dynamite,20,anchorman,77
+George Clooney,american History X,72,napoleon dynamite,20
+Harrison Ford,batman begins,75,napoleon dynamite,20
+Mark Hamill,Saving Private Ryan,90,gladiator,55,american History X,72
+Carrie Fisher,napoleon dynamite,20,Spaceballs,81,Saving Private Ryan,90
+Nickolas Cage,Spaceballs,81,american History X,72
+Leonardo DiCaprio,the dark knight,90,One flew over the cuckoos nest,66,gladiator,55
+Ellen Page,batman begins,75,the dark knight,90
+Keanu Reeves,Saving Private Ryan,90
+Jodi Foster,Blazing Saddles,88,batman begins,75
+Anthony Perkins,anchorman,77,gladiator,55,american History X,72
+Martin Sheen,One flew over the cuckoos nest,66,the dark knight,90,anchorman,77
+Sigourney Weaver,napoleon dynamite,20,american History X,72,independence day,55
+Jack Nicholson,independence day,55,american History X,72
+Stephen Baldwin,american History X,72,the dark knight,90
+Kevin Spacey,gladiator,55,batman begins,75,the dark knight,90
+Robin Williams,napoleon dynamite,20,independence day,55
+Steve Carrell,independence day,55,napoleon dynamite,20,american History X,72,american History X,72,batman begins,75

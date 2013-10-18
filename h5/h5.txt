@@ -1,0 +1,72 @@
+Question 1)
+
+Part A:
+
+public static int sum( int K, int M)
+{
+	if(M == 0)
+	{
+		return K;
+	}
+	if(M > 0)
+	{
+		return sum( K , M - 1) + 1;
+	}
+	if(M < 0)
+	{
+		return sum( K, M + 1) - 1;
+	}
+}
+
+
+Part B:
+
+1) The problem size is the distance of M from 0 or absolute value of M.
+
+2) Recurrence Equation for M > 0
+	T(N) = 1 + T(N-1)
+   Recurrence equation for M < 0
+	T(N) = 1 + T(N-1)
+   Base case M = 0
+	T(0) = 1
+
+3)	T(0) = 1
+	T(1) = 1 + T(0) = 2
+	T(2) = 1 + T(1) = 3
+Looking at the pattern the solution is T(N) = N+1	
+
+4)
+	T(N) = 1 + T(N-1)
+	     = 1 + [(N-1) + 1] //from the guessed solution
+	     = 1 + N	//Which is equal to our guessed solution
+	Thus verified.	
+
+5) O(|M|)
+
+
+Question 2)
+
+public TreeNode<T> prune( TreeNode<T> tree, int depth)
+{
+	if(tree == null)
+		return null;
+	if(depth == 0)
+		return null;
+	if(depth == 1)
+	{
+		tree.setChildren(null);
+		return tree;
+	}
+	if(depth > 1)
+	{
+		ListADT<TreeNode<T>> tempChildren = tree.getChildren();
+		Iterator<TreeNode<T>> itr = tempChildren.iterator();
+		while(itr.hasNext())
+		{
+			prune(itr.next(), depth-1);
+		}
+		return tree;
+
+	}
+}
+

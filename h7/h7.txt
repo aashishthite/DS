@@ -1,0 +1,38 @@
+Question 1)
+
+
+Bucket 0:	
+Bucket 1:	was
+Bucket 2:	to
+Bucket 3:	of
+Bucket 4:	you
+Bucket 5:	in
+Bucket 6:	the
+Bucket 7:	and,	a
+Bucket 8:
+Bucket 9:
+Bucket 10:	is,	he
+Bucket 11:	it,	on
+Bucket 12:	for,	are
+Bucket 13:	that
+Bucket 14:
+
+
+Question 2)
+
+Part A:
+	1247536
+
+Part B:
+	1254376
+
+
+
+Question 3)
+	
+->EBCFAD
+->EBCADF
+->EBCAFD
+
+
+	

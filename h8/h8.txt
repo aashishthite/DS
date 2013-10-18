@@ -1,0 +1,38 @@
+Question 1)
+
+
+A: Bubble Sort
+	Iteration 1: 2 5 3 1 4 6
+	Iteration 2: 2 3 1 4 5 6
+	Iteraiton 3: 2 3 1 4 5 6
+
+B: Insertion Sort
+	Iteration 1: 2 5 6 3 1 4
+	Iteraiton 2: 2 5 6 3 1 4
+	Iteration 3: 2 3 5 6 1 4 
+
+C: Selection Sort
+	Iteration 1: 1 5 2 6 3 4
+	Iteration 2: 1 2 5 6 3 4
+	Iteration 3: 1 2 3 5 6 4
+
+
+Question 2)
+
+5 2 6	3 1 4	-------------------------------------------->2
+5 2	6	31	4	---------------------------->4
+5	2	6	3	1	4      ------------->6
+Total------------------------------------------------------->12
+
+
+Quesiton 3)
+
+A[low] = 5
+A[high] = 4
+A[mid] = 6
+
+the median of 4,5,6 is 5
+
+The first pivot is '5'
+
+

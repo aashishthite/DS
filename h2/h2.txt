@@ -1,0 +1,89 @@
+Question 1)
+
+a)
+
+main begin
+a begin
+b begin
+b finally
+a caught Ex3
+a end
+main finally
+main end
+
+
+b)
+
+main begin
+a begin
+Program terminated due to Exception Ex1
+
+
+
+
+c)
+
+We need to specify :
+
+void b() throws Ex2
+
+
+
+
+
+Question 2)
+
+
+public E forceGet(int pos) 
+{
+	E temp;
+	if(list==null || list.isEmpty())
+	{
+		return null;
+	}
+	try
+	{
+		temp = list.get(pos);
+	}
+	catch( IndexOutofBoundsException e)
+	{
+		temp=pos>0?list.get(size()-1):list.get(0);
+	}
+	return temp;
+}
+
+
+
+
+Question 3)
+
+
+A) O(N^2): Adding an element to the zeroeth position will include the shifting of rest of elements by one position.
+
+B) O(N): No shifting is required as element is added at the end of the list.
+
+
+
+Question 4)
+
+A)
+Algorithm1: O(N^3)
+Algorithm2: O(NlogN)
+Algorithm3: O(N^2)
+
+So complexity wise: Algorithm2 < Algorithm3 < Algorithm1
+
+B)
+Depends on the scale that you are working at.
+At a small scale, O(N^2) algorithm might take lesser time to execute than O(N). Say, if N=5 and the algorithms you are comparing have complexities 2N^2 and 1000*N, then 2N^2 will perform better in this case.
+So an algorithm with lower complexity cannot be used always.
+
+Question 5)
+A)
+O(1) and depends on neither N or M
+
+B) 
+O(N) and depends on N
+
+C)
+O(N*M) or O(N^2) and depends on N and M both.

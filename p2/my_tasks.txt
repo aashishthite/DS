@@ -1,0 +1,4 @@
+Attend Lecture, 75
+Work on Homework, 15
+Study for Exam, 200
+Register for Classes, 20

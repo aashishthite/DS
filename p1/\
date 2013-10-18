@@ -1,0 +1,210 @@
+import java.util.*;
+import java.io.*;
+
+public class MovieDBMain {
+    public static void main(String[] args) {
+
+        // *** Add code for steps 1 - 3 of the main method ***
+       String S;//String to store the filename
+	//System.out.println(args.length);
+        Scanner stdin = new Scanner(System.in);  // for reading console input
+        boolean done = false;
+	MovieDB movie_database = new MovieDB();
+	if(args.length==1)
+	{
+		S=args[0];//Copy the command line argument to a variable
+		File input_file = new File(S);//Create a file object
+		
+		if(input_file.exists() && input_file.isFile() && input_file.canRead())
+		{
+			try
+			{
+				Scanner infile = new Scanner(input_file);
+				//movie_database = new MovieDB();
+				while(infile.hasNextLine())
+				{
+					String actor_name;
+					String line = infile.nextLine();
+				//	System.out.println(line);
+					Scanner linescanner = new Scanner(line);
+					linescanner.useDelimiter(",");
+				//	if(linescanner.hasNext())
+					{
+						actor_name = linescanner.next();
+					}
+					while(linescanner.hasNext())
+					{
+						String movie_name = linescanner.next();
+						String movie_rating = linescanner.next();
+						if(isInteger(movie_rating))
+						{
+							movie_database.addMovie(movie_name.toLowerCase(), Integer.parseInt(movie_rating));
+							movie_database.addActor(actor_name.toLowerCase(), movie_name.toLowerCase());
+						}
+						else
+						{
+							System.out.println("Wrong file");
+							done = true;
+						}
+							
+					}
+				}
+			}
+			catch(FileNotFoundException e)
+			{
+				System.out.println("Exception caught: File not found");
+			}
+		}
+		else
+		{
+			System.out.println("Error: Cannot access input file");
+			done=true;
+		}
+			
+	}
+	else
+	{
+		System.out.println("Usage: java MovieDBMain FileName");
+		done=true;
+	}
+	
+
+
+	while (!done) {
+            System.out.print("Enter option ( rdpcusx ): ");
+            String input = stdin.nextLine();
+
+            // only do something if the user enters at least one character
+            if (input.length() > 0) {
+                char choice = input.charAt(0);  // strip off option character
+                String remainder = "";  // used to hold the remainder of input
+                if (input.length() > 1) { // if there is an argument
+                    // trim off any leading or trailing spaces
+                    remainder = input.substring(1).trim(); 
+
+	                switch (choice) { // the commands that have arguments
+
+	
+	                case 'r':
+				 // *** Add code to implement this option ***
+	                   	if(movie_database.containsMovie(remainder.toLowerCase()))
+				{
+					System.out.println("Movie Present");
+					System.out.println(toTitleCase(remainder));
+				}
+				else
+				{
+					System.out.println("movie not found");
+				}
+	                    break;
+	
+	                case 'p':
+	                    // *** Add code to implement this option ***
+	                    break;
+	
+	                case 'c':
+	                    // *** Add code to implement this option ***
+	                    break;
+	
+	                case 'u':
+	                    // The following code reads in a comma-separated sequence 
+	                    // of a string followed by an integer.  If there are not
+                            // exactly two elements in the sequence or if the second
+                            // element is not an integer an error message is printed.
+	                    String[] tokens = remainder.split("[,]+");
+	                    if (tokens.length != 2) {
+	                        System.out.println("wrong number of arguments");
+	                    }
+                            else if (!isInteger(tokens[1].trim())) {
+                                System.out.println("second argument must be an int");
+                            }
+	                    else {
+	                        String title = tokens[0].trim();
+	                        int newRating = Integer.parseInt(tokens[1].trim());
+	                        
+	                        // *** Add more code to implement this option ***
+	                    }
+	                    break;
+
+	                case 's':
+	                    // The following code reads in a comma-separated sequence 
+	                    // of strings.  If there are exactly two strings in the 
+	                    // sequence, the strings are assigned to name1 and name2.
+	                    // Otherwise, an error message is printed.
+	                    String[] tokens1 = remainder.split("[,]+");
+	                    if (tokens1.length != 2) {
+	                        System.out.println("need to provide exactly two names");
+	                    }
+	                    else {
+	                        String name1 = tokens1[0].trim();
+	                        String name2 = tokens1[1].trim();
+	                        
+	                        // *** Add more code to implement this option ***
+	                    }
+	                    break;
+	
+	                default: // ignore any unknown commands
+                    	System.out.println("Incorrect command.");
+	                	break;
+	                
+	                } // end switch
+                } // end if
+                else { //if there is no argument
+                	switch (choice) { // the commands without arguments
+                	
+                	case 'd': 
+	                    // *** Add code to implement this option ***
+	                    break;
+	                    
+                	case 'x':
+	                    done = true;
+	                    System.out.println("exit");
+	                    break;
+	                    
+                	default:  // a command with no argument
+                		System.out.println("Incorrect command.");
+	                    break;
+                	} // end switch
+                } // end else  
+           } // end if
+        } // end while
+    } // end main
+
+    /**
+     * Checks if a given string can be parsed to an int.
+     * 
+     * @param s the string to check
+     * @return true if s can be cast to an int, false otherwise
+     */
+    private static boolean isInteger(String s) {
+        try { 
+            Integer.parseInt(s); 
+        } catch(NumberFormatException e) { 
+            return false; 
+        }
+        return true;
+    }
+	//Refered stackoverflow for title case conversion
+	private static String toTitleCase(String input)
+	{
+		StringBuilder titleCase = new StringBuilder();
+		boolean nextTitleCase = true;
+		for (char c : input.toCharArray())
+		{
+			if(Character.isSpaceChar(c))
+			{
+				nextTitleCase = true;
+			}
+			else if (nextTitleCase)
+			{
+				c = Character.toTitleCase(c);
+				nextTitleCase = false;
+			}
+			titleCase.append(c);
+
+		}
+		return titleCase.toString();
+	}
+
+
+}
